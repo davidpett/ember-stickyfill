@@ -1,8 +1,8 @@
 {
   "name": "ember-stickyfill",
   "dependencies": {
+    "Stickyfill": "^1.1.4",
     "ember": "~2.8.0",
-    "ember-cli-shims": "0.1.1",
-    "Stickyfill": "^1.1.4"
+    "ember-cli-shims": "0.1.1"
   }
 }
