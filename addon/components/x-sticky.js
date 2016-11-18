@@ -1,3 +1,4 @@
+/* global Stickyfill */
 import Ember from 'ember';
 import layout from '../templates/components/x-sticky';
 
@@ -12,7 +13,12 @@ export default Ember.Component.extend({
 
   initSticky: on('didInsertElement', function() {
     next(this, function() {
-      this.$().Stickyfill();
+      Stickyfill.add(this.element);
+    });
+  }),
+  destroySticky: on('willDestroyElement', function() {
+    next(this, function() {
+      Stickyfill.remove(this.element);
     });
   })
 });
